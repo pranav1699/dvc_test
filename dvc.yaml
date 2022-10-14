@@ -1,0 +1,9 @@
+stages:
+  prepare:
+    cmd: python prepare.py
+    outs:
+      - sample.txt
+  read:
+    cmd: python read.py
+    deps:
+      - sample.txt

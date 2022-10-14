@@ -1,0 +1,14 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python prepare.py
+    outs:
+    - path: sample.txt
+      md5: 3e25960a79dbc69b674cd4ec67a72c62
+      size: 11
+  read:
+    cmd: python read.py
+    deps:
+    - path: sample.txt
+      md5: 3e25960a79dbc69b674cd4ec67a72c62
+      size: 11
